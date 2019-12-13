@@ -1,0 +1,79 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Django</title>
+    <link rel="stylesheet" type="text/css" href="{% static "static/css/style.css" %}">
+</head>
+<body>
+    <div class="top-bar">
+          <div class="top-bar-left">
+            <ul class="menu">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <li><a href="/">DL</a></li>
+                <li><a href="/user/">Subjects</a></li>
+                <li><a href="/mail/">Mail</a></li>
+=======
+              <li><a href="/">DL</a></li>
+                <li><a href="/user/">Subjects</a></li>
+                <li><a href="/mail/">Mail</a></li>
+                <li><a href="/questionary/">Questionary</a></li>
+                <li><a href="/schedule/">Schedule</a></li>
+>>>>>>> parent of 34c64c1... asd
+            </ul>
+        </div>
+        <div class="top-bar">
+            <ul class="menu">
+                <form action="{%url 'search' %}" method="post">
+                          {% csrf_token %}
+                    <li><input type="text" name="search_field" value="" placeholder="Search" ></li>
+                    <li><input class="button" type="submit" name="Search" value="Search"></li>
+                </form>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                {% if username %}
+                    <a class="button" href="/auth/logout/">Log Out ({{ username }})</a>
+                {% else %}
+                    <a class="button" href="/auth/login/">Log In</a>
+                {% endif %}
+
+<<<<<<< HEAD
+>>>>>>> parent of 430dda8... Downloading
+=======
+>>>>>>> parent of 34c64c1... asd
+            </ul>
+        </div>
+    </div>
+    <div class="callout large primary">
+      <div class="row column text-center">
+        <h1><a href="/">Subjects</a></h1>
+      </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-x">
+        <div class="small-1 columns"></div> <!— Для отступа слева —>
+            <div class="small-8 columns">{% block student %}{% endblock %}</div></div>
+    </div>
+<div class="grid-container">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+{% block uploads %}{% endblock %}
+{% block login %}{% endblock %}
+>>>>>>> parent of 430dda8... Downloading
+=======
+{% block uploads %}{% endblock %}
+{% block questionary %}{% endblock %}
+{% block login %}{% endblock %}
+>>>>>>> parent of 34c64c1... asd
+</div>
+</body>
+</html>
