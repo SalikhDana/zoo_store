@@ -18,22 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-<<<<<<< HEAD
-    path('', include('subjects.urls')),
-=======
-=======
->>>>>>> parent of 34c64c1... asd
-    path('basicview/', include('article.urls')),
     path('auth/', include('loginsys.urls')),
-    path('user/', include('subjects.urls')),
-    path('mail/', include('mail.urls')),
-<<<<<<< HEAD
     path('', include('article.urls')),
->>>>>>> parent of 430dda8... Downloading
-=======
-    path('questionary/', include('questionary.urls')),
-    path('', include('article.urls')),
->>>>>>> parent of 34c64c1... asd
 
 ]

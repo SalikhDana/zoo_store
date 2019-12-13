@@ -1,11 +1,9 @@
 from django.urls import path, include, re_path
 import article.views
 urlpatterns = [
-    path('articles/all/', article.views.articles),
-    path('articles/get/<int:article_id>/', article.views.article),
-    path('articles/addlike/<int:article_id>/', article.views.addlike),
-    path('search/', article.views.search, name='search'),
-    path('articles/addcomment/<int:article_id>/', article.views.addcomment),
-    path('page/<int:page_number>/', article.views.articles),
-    path('', article.views.articles),
+    path('articles/all/', article.views.animals),
+    path('articles/get/<int:animal_id>/', article.views.animal),
+    path('articles/addcomment/<int:animal_id>/', article.views.addcomment),
+    path('page/<int:page_number>/', article.views.animals),
+    path('', article.views.animals),
 ]
